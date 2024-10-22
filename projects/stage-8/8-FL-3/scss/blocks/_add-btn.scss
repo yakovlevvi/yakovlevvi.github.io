@@ -1,0 +1,57 @@
+.add-btn {
+	border: none;
+	background-color: $color-hint-of-red;
+	border-radius: 50%;
+	padding: 22px;
+	color: $color-bokara-grey;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+
+	@media (max-width: 1450px) {
+		padding: 15px;
+	}
+
+	@include vp-1023 {
+		padding: 16px;
+	}
+
+	@include vp-767 {
+		padding: 12px;
+	}
+
+	@media (max-width: 400px) {
+		padding: 8px;
+	}
+
+	&:hover, &:focus-visible {
+		background-color: $color-green-white;
+		outline:none;
+	}
+
+	svg {
+		flex-shrink: 0;
+
+		@media (max-width: 1450px) {
+			width: 15px;
+			height: 15px;
+		}
+
+		@include vp-1023 {
+			width: 15px;
+			height: 15px;
+		}
+
+		@include vp-767 {
+			width: 12px;
+			height: 12px;
+		}
+
+		@media (max-width: 400px) {
+			width: 10px;
+			height: 10px;
+		}
+	}
+}

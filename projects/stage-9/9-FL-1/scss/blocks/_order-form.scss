@@ -1,0 +1,12 @@
+.order-form {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+
+.order-form__item {
+  width: calc((100% - 54px) / 3);
+}

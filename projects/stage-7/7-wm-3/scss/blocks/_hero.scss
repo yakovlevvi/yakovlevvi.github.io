@@ -1,0 +1,110 @@
+.hero {
+  padding: 48px 0 0;
+
+  @include vp-1023 {
+    padding: 40px 0 0;
+  }
+
+  @include vp-767 {
+    padding: 32px 0 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 220px;
+    grid-template-columns: 360px 420px;
+    align-items: start;    
+    
+    @include vp-1023 {
+      gap: 48px;
+      grid-template-columns: repeat(2, 340px);
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    font-size: 70px;
+    font-family: $ff-ardeco;
+    font-weight: 400;
+    line-height: 70px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include vp-1023 {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 44px;
+      line-height: 40px;
+    }
+
+    &--left {
+      text-align: left;
+
+      @include vp-767 {
+        text-align: center;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+  }
+
+  &__img-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, $color-cerulean-blue-0 0%, $color-cerulean-blue-60 46.28%, $color-cerulean-blue 89%);
+
+    @include vp-1023 {
+      height: 100px;
+    }
+
+    @include vp-767 {
+      height: 50px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin: 48px 0 0;
+
+    @include vp-1023 {
+      margin-top: 40px;
+    }
+
+    @include vp-767 {
+      margin-top: 32px;
+    }
+  }
+}

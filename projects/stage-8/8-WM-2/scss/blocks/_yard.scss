@@ -1,0 +1,245 @@
+.yard {
+	padding: 0 0 120px;
+
+	@include vp-1023 {
+		padding: 0 0 80px;
+	}
+
+	@include vp-767 {
+		padding: 0 0 60px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 120px;
+
+		@include vp-1023 {
+			gap: 80px;
+		}
+
+		@include vp-767 {
+			gap: 60px;
+		}
+	}
+
+	&__heading {
+		display: grid;
+		grid-template-columns: 700px 1fr;
+		gap: 173px;
+		align-items: center;
+
+		@media (max-width: 1450px) {
+				grid-template-columns: 50% 1fr;
+			}
+
+		@media (max-width: 1300px) {
+			gap: 100px;
+		}
+
+		@include vp-1023 {
+			gap: 48px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include vp-767 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 41px;
+		}
+	}
+
+	&__title {
+		font-family: $ff-tenor;
+		font-weight: 400;
+		font-size: 34px;
+		line-height: 44px;
+		letter-spacing: -0.08em;
+		text-transform: uppercase;
+		color: $color-fallow;
+		max-width: 440px;
+		margin: 0 0 30px;
+
+		@include vp-1023 {
+			font-size: 24px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+
+		@include vp-767 {
+			font-size: 20px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		@include vp-1023 {
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		padding-left: 15px;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 6px;
+			height: 6px;
+			background-color: $color-fallow;
+			border-radius: 50%;
+			position: absolute;
+			top: 9px;
+			left: 3px;
+
+			@include vp-1023 {
+				left: 0;
+				top: 6px;
+			}
+		}
+	}
+
+	&__text {
+		margin: 0;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 26px;
+
+		@include vp-1023 {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+
+	&__space-wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 0 22px;
+
+		@include vp-1023 {
+			margin: 0 0 20px;
+		}
+
+		&::before {
+			content: '';
+			width: calc(100% - 20px);
+			height: 1px;
+			background-color: $color-fallow;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 0;
+
+			@include vp-1023 {
+				width: calc(100% - 10px);
+				left: 5px;
+			}
+		}
+	}
+
+	&__arrow {
+		color: $color-fallow;
+
+		@include vp-1023 {
+			width: 12px;
+			height: 12px;
+		}
+
+		&--reversed {
+			transform: scaleX(-1);
+		}
+	}
+
+	&__space {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 22px;
+		background-color: $color-rustic-red;
+		padding: 0 84px;
+		z-index: 1;
+
+		@include vp-1023 {
+			padding: 0 41px;
+		}
+
+		@include vp-767 {
+			padding: 0 28px;
+		}
+	}
+
+	&__space-text {
+		display: flex;
+		gap: 15px;
+		align-items: end;
+		font-family: $ff-tenor;
+		font-weight: 400;
+		color: $color-fallow;
+
+		@include vp-1023 {
+			align-items: center;
+			gap: 10px;
+		}
+
+		@include vp-767 {
+			align-items: end;
+		}
+	}
+
+	&__space-num {
+		font-size: 140px;
+		line-height: 100px;
+		letter-spacing: -0.04em;
+		padding-bottom: 8px;
+
+		@include vp-1023 {
+			font-size: 90px;
+			line-height: 70px;
+			padding: 0;
+		}
+
+		@include vp-767 {
+			font-size: 70px;
+			line-height: 50px;
+		}
+	}
+
+	&__space-unit {
+		font-size: 34px;
+		line-height: 44px;
+
+		@include vp-1023 {
+			font-size: 14px;
+			line-height: 18px;
+			padding-bottom: 10px;
+		}
+
+		@include vp-767 {
+			padding: 0;
+		}
+	}
+
+	&__space-note {
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		line-height: 26px;
+
+		@include vp-1023 {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+}

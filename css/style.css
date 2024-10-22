@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost/Jost-Regular.woff2") format("woff2"), url("../fonts/Jost/Jost-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost/Jost-Bold.woff2") format("woff2"), url("../fonts/Jost/Jost-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  min-height: 100vh;
+  font-family: "Jost", "Arial", sans-serif;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #D3DEF7;
+  padding: 20px 0;
+}
+
+.footer {
+  background-color: #D3DEF7;
+  padding: 20px 0;
+}
+
+.projects {
+  padding: 50px 0;
+}
+.projects__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+}/*# sourceMappingURL=style.css.map */

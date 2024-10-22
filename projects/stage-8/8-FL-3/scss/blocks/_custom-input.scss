@@ -1,0 +1,62 @@
+.custom-input {
+	width: 100%;
+	position: relative;
+
+	&--error {
+		.custom-input__field {
+			border-color: $color-red;
+		}
+
+		.custom-input__error {
+			display: flex;
+		}
+	}
+
+	&__field {
+		border: 1px solid $color-bokara-grey-10;
+		width: 100%;
+		padding: 19px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 22px;
+		background-color: transparent;
+		color: $color-bokara-grey;
+
+		@include vp-767 {
+			font-size: 14px;
+			line-height: 18px;
+			padding: 16px 19px;
+		}
+
+		&::placeholder {
+			color: $color-bokara-grey-30;
+		}
+
+		&:hover, &:focus-visible {
+			border-color: $color-bokara-grey;
+			outline:none;
+		}
+	}
+
+	&__label {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		position: absolute;
+		left: 0;
+		top: -21px;
+		color: $color-finch;
+	}
+
+	&__error {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: $color-red;
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		transform: translateY(100%);
+		display: none;
+	}
+}

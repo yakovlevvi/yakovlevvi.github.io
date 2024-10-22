@@ -1,0 +1,159 @@
+.popular {
+	&__title {
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 56px;
+		letter-spacing: -0.04em;
+		margin: 0 0 40px;
+
+		@include vp-1023 {
+			font-size: 36px;
+			line-height: 40px;
+			margin: 0 auto 30px;
+			text-align: center;
+		}
+
+		@include vp-767 {
+			font-size: 26px;
+			line-height: 32px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 16px;
+
+		@include vp-1023 {
+			display: flex;
+			gap: 12px;
+			overflow: auto;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			margin: 0 -30px;
+			padding: 0 30px;
+		}
+
+		@include vp-767 {
+			gap: 10px;
+			margin: 0 -20px;
+			padding: 0 20px;
+		}
+	}
+
+	&__item {
+		&--flat {
+			grid-column: span 2;
+
+			.popular__img {
+				@include vp-1023 {
+					width: 468px;
+				}
+
+				@include vp-767 {
+					width: 320px;
+				}
+			}
+		}
+	}
+
+	&__link {
+		position: relative;
+
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: $color-bokara-grey-60;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+
+		&:hover::after {
+			display: block;
+		}
+
+		&:focus-visible::after {
+			display: block;
+		}
+
+		&:hover,
+		&:focus-visible {
+			outline: none;
+
+			.popular__figcaption {
+				display: none;
+			}
+
+			.popular__add-icon {
+				display: flex;
+			}
+		}
+	}
+
+	&__figure {
+		margin: 0;
+		position: relative;
+
+		&::after {
+			content: "";
+			background-color: $color-bokara-grey-20;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__img {
+		width: 100%;
+
+		@include vp-1023 {
+			width: 228px;
+			height: 320px;
+		}
+
+		@include vp-767 {
+			width: 155px;
+			height: 220px;
+		}
+	}
+
+	&__figcaption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28px;
+		color: $color-white;
+		z-index: 1;
+		text-align: center;
+
+		@include vp-767 {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+	&__add-icon {
+		color: $color-white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		display: none;
+	}
+}

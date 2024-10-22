@@ -1,0 +1,71 @@
+.unique-apartments {
+	padding: 80px 0 0;
+
+	@include vp-767 {
+		padding-top: 60px;
+	}
+
+	&__img-wrapper {
+		position: relative;
+	}
+
+	&__img-wrapper::after {
+		content: '';
+		width: 100%;
+		height: 200px;
+		background: linear-gradient(
+			180deg,
+			$color-cerulean-blue-0 0%,
+			$color-cerulean-blue-60 46.28%,
+			$color-cerulean-blue 89%
+		);
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+
+		@include vp-1023 {
+			height: 100px;
+		}
+
+		@include vp-767 {
+			height: 50px;
+		}
+	}
+
+	&__image {
+		width: 100%;
+	}
+
+	&__benefit {
+		border: 0;
+		min-height: unset;
+		position: absolute;
+		bottom: 201px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0;
+
+		@include vp-1023 {
+			bottom: 101px;
+		}
+
+		@include vp-767 {
+			bottom: 51px;
+		}
+	}
+
+	&__benefit .benefit__number {
+		@include vp-1023 {
+			font-size: 56px;
+			line-height: 50px;
+			margin-bottom: 8px;
+		}
+	}
+
+	&__benefit .benefit__text {
+		@include vp-1023 {
+			font-size: 16px;
+			line-height: 18px;
+		}
+	}
+}

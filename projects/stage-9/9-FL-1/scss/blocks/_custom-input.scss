@@ -1,0 +1,58 @@
+.custom-input {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  $root: &;
+
+  &--error {
+    #{$root}__field {
+      background-color: rgba($color-salmon, 0.15);
+    }
+
+    #{$root}__icon {
+      color: $color-salmon;
+    }
+  }
+
+  &__field {
+    background-color: rgba($color-white, 0.15);
+    border: none;
+    border-radius: 8px;
+    color: $color-white;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    height: 56px;
+    line-height: 24px;
+    padding: 16px 16px 16px 52px;
+    width: 100%;
+    outline: none;
+    transition: background-color $transition-300;
+
+    &:hover,
+    &:focus-visible {
+      &:not(#{$root}--error #{$root}__field) {
+        background-color: rgba($color-bay-leaf, 0.15);
+
+        + .custom-input__icon {
+          color: $color-light-green;
+        }
+      }
+    }
+
+    &::placeholder {
+      color: rgba($color-white, 0.4);
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    color: rgba($color-white, 0.8);
+    left: 16px;
+    position: absolute;
+    top: 16px;
+    transition: color $transition-300;
+  }
+}

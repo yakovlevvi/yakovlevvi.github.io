@@ -1,0 +1,254 @@
+.advantages {
+	padding: 120px 0;
+	$root: &;
+
+	@include vp-1023 {
+		padding: 80px 0;
+	}
+
+	@include vp-767 {
+		padding: 60px 0;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 400px;
+		gap: 168px;
+		align-items: center;
+
+		@media (max-width: 1300px) {
+			gap: 80px;
+			grid-template-columns: 1fr 300px;
+		}
+
+		@include vp-1023 {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		@include vp-767 {
+			gap: 60px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		@include vp-1023 {
+			gap: 20px;
+		}
+
+		@include vp-767 {
+			gap: 15px;
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 26px;
+		margin: 0;
+
+		@include vp-1023 {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		columns: 2;
+		column-gap: 28px;
+
+		@include vp-1023 {
+			column-gap: 60px;
+			min-height: 280px;
+		}
+
+		@include vp-767 {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		margin: 0 0 15px;
+		position: relative;
+		padding-left: 16px;
+
+		@include vp-1023 {
+			margin-bottom: 10px;
+		}
+
+		@include vp-767 {
+			margin: 0;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&::before {
+			content: '';
+			width: 6px;
+			height: 6px;
+			background-color: $color-fallow;
+			border-radius: 50%;
+			position: absolute;
+			top: 11px;
+			left: 0;
+
+			@include vp-1023 {
+				top: 7px;
+			}
+		}
+	}
+
+	&__sublist {
+		border: 1px solid $color-fallow;
+		border-bottom: none;
+		border-radius: 600px 600px 0 0;
+		min-height: 700px;
+		margin: 0;
+		padding: 65px 20px 20px;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+		align-items: center;
+		justify-content: center;
+
+		@include vp-1023 {
+			border: none;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 40px;
+			min-height: 150px;
+		}
+
+		@include vp-767 {
+			grid-template-columns: repeat(2, 1fr);
+			max-width: 280px;
+			gap: 20px 40px;
+		}
+	}
+
+	&__subitem {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		position: relative;
+		height: 100%;
+
+		@include vp-767 {
+			display: grid;
+			grid-template-rows: 40px 1fr;
+			justify-items: center;
+			align-items: start;
+			gap: 10px;
+
+			#{$root}__feature {
+				grid-row: 2;
+			}
+		}
+
+		&:nth-child(even) {
+			@include vp-1023 {
+				justify-content: end;
+			}
+		}
+
+		&:nth-child(3n),
+		&:nth-child(4n) {
+			@include vp-767 {
+				grid-template-rows: 1fr 40px;
+
+				#{$root}__feature {
+					grid-row: 1;
+				}
+			}
+		}
+	}
+
+	&__feature {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		@include vp-767 {
+			gap: 0;
+		}
+	}
+
+	&__icon {
+		color: $color-fallow;
+		display: none;
+
+		@include vp-1023 {
+			display: flex;
+		}
+	}
+
+	&__measure {
+		color: $color-fallow;
+		font-family: $ff-tenor;
+		font-weight: 400;
+		display: flex;
+		gap: 12px;
+		align-items: end;
+
+		@include vp-1023 {
+			gap: 5px;
+		}
+	}
+
+	&__num {
+		font-size: 48px;
+		line-height: 48px;
+
+		@include vp-1023 {
+			font-size: 40px;
+			line-height: 40px;
+		}
+
+		@include vp-767 {
+			font-size: 28px;
+			line-height: 36px;
+		}
+	}
+
+	&__unit {
+		font-size: 20px;
+		line-height: 24px;
+		padding-bottom: 3px;
+		text-transform: uppercase;
+
+		@include vp-1023 {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	&__subtext {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 26px;
+		max-width: 192px;
+		text-align: center;
+
+		@include vp-1023 {
+			font-size: 14px;
+			line-height: 20px;
+			max-width: 150px;
+		}
+	}
+}

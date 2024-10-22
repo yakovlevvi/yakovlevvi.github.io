@@ -1,0 +1,42 @@
+.header {
+  background: linear-gradient(90deg, #415BD2 0%, #8DA1F7 100%);
+
+  &__content {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 22px 0;
+
+    @include vp-1023 {
+      padding: 15px 0;
+    }
+  }
+
+  &__logo-link {
+    height: 36px;
+    width: 170px;
+
+    &:hover, &:focus-visible {
+      opacity: 0.5;
+      outline: none;
+    }
+
+    @include vp-1023 {
+      width: 36px;
+    }
+  }
+
+  &__burger {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover, &:focus-visible {
+      opacity: 0.5;
+      outline: none;
+    }
+  }
+}

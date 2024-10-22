@@ -1,0 +1,46 @@
+.custom-textarea {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+
+  &__field {
+    background-color: rgba($color-white, 0.15);
+    border-radius: 8px;
+    border: none;
+    color: $color-white;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    min-height: 128px;
+    padding: 16px 16px 16px 52px;
+    width: 100%;
+    resize: none;
+    outline: none;
+    transition: background-color $transition-300;
+
+    &:hover,
+    &:focus-visible {
+      background-color: rgba($color-bay-leaf, 0.15);
+
+      + .custom-textarea__icon {
+        color: $color-light-green;
+      }
+    }
+
+    &::placeholder {
+      color: rgba($color-white, 0.4);
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    color: rgba($color-white, 0.8);
+    left: 16px;
+    position: absolute;
+    top: 16px;
+    transition: color $transition-300;
+  }
+}

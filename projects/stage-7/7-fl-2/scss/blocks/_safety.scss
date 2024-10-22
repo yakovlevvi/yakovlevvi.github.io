@@ -1,0 +1,134 @@
+.safety {
+	margin: 0 0 50px;
+
+	@include vp-1023 {
+		margin-bottom: 30px;
+	}
+
+  @include vp-767 {
+    margin-bottom: 19px;
+  }
+
+	&__wrap {
+		display: grid;
+		justify-content: space-between;
+		grid-template-columns: 650px 290px;
+		gap: 80px;
+		margin: 0 0 60px;
+
+		@include vp-1023 {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		@include vp-767 {
+			gap: 30px;
+      margin-bottom: 40px;
+		}
+	}
+
+	&__nav {
+		justify-self: end;
+		display: grid;
+		gap: 20px;
+
+		@include vp-1023 {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 18px 20px;
+		}
+
+    @include vp-767 {
+      gap: 15px;
+    }
+
+		.safety__btn {
+			width: 100%;
+
+			@include vp-1023 {
+				grid-column: span 2;
+			}
+		}
+	}
+
+	&__nav-img {
+		width: 290px;
+		height: 200px;
+		border-radius: 20px;
+
+		@include vp-1023 {
+			display: none;
+		}
+	}
+
+	&__title {
+		font-size: 28px;
+		font-weight: 600;
+		line-height: 32px;
+		margin: 0 0 20px;
+
+		@include vp-1023 {
+			font-size: 26px;
+			line-height: 30px;
+		}
+
+		@include vp-767 {
+			font-size: 22px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 0 18px;
+
+		@include vp-767 {
+			font-size: 13px;
+			line-height: 16px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text--bold {
+		font-weight: 600;
+	}
+
+	&__title-cite {
+		color: $color-black;
+		font-size: 18px;
+		margin: 0 0 6px;
+		font-weight: 600;
+		line-height: 32px;
+
+		@include vp-767 {
+			font-size: 16px;
+			line-height: 20px;
+      margin-bottom: 8px;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding-left: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		@include vp-1023 {
+			padding-left: 14px;
+		}
+
+		@include vp-767 {
+			gap: 8px;
+		}
+	}
+
+	&__item {
+		.safety__text {
+			margin: 0;
+		}
+	}
+}

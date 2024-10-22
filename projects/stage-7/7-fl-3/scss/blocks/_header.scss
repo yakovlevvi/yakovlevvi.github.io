@@ -1,0 +1,172 @@
+.header {
+  background: linear-gradient(180deg, #6e48db 0%, #9e5fc4 100%);
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &__nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $color-white;
+
+    &:hover, &:focus-visible {
+      opacity: 0.5;
+      outline:none;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 330px 1fr 200px 100px;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 0;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 100px;
+      padding: 20px 0;
+    }
+
+    @include vp-767 {
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-link {
+    width: 140px;
+    height: 40px;
+    margin: 0 auto;
+
+    &:hover, &:focus-visible {
+      opacity: 0.5;
+      outline:none;
+    }
+
+    @include vp-1023 {
+      align-self: start;
+      margin: 0;
+    }
+
+    @include vp-767 {
+      width: 112px;
+      height: 32px;
+    }
+
+    svg {
+      width: 140px;
+      height: 40px;
+      flex-shrink: 0;
+
+      @include vp-767 {
+        width: 112px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    gap: 20px;
+
+    @include vp-767 {
+      gap: 15px;
+    }
+  }
+
+  &__burger,
+  &__favorites {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover, &:focus-visible {
+      opacity: 0.5;
+      outline:none;
+    }
+
+    @include vp-767 {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__favorites-icon {
+    width: 22px;
+    height: 20px;
+    color: $color-white;
+  }
+
+  &__burger-icon {
+    width: 36px;
+    height: 14px;
+    color: $color-white;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &__location-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  &__location-text {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    color: $color-white;
+  }
+
+  &__location-btn {
+    color: $color-white;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration-line: underline;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover, &:focus-visible {
+      opacity: 0.5;
+      outline:none;
+    }
+  }
+}

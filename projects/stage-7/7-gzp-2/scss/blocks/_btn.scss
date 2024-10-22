@@ -1,0 +1,87 @@
+.btn {
+  outline: none;
+  padding: 14px;
+  color: $color-white;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  border: none;
+  background-color: $color-black-russian;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover, &:focus-visible {
+    background-color: $color-blue-zodiac;
+  }
+
+  
+  @include vp-1023 {
+    font-size: 14px;
+  }
+  
+  &--second {
+    padding: 18px;
+    font-size: 15px;
+    line-height: 20px;
+    background-color: $color-royal-blue-1;
+
+    &:hover, &:focus-visible {
+      background-color: $color-free-speech-blue;
+      outline: none;
+    }
+    
+    @include vp-1023 {
+      padding: 16px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+  
+  &--third {
+    color: $color-black-russian;
+    padding: 14px;
+    font-size: 15px;
+    line-height: 20px;
+    background-color: $color-white;
+
+    &:hover, &:focus-visible {
+      background-color: $color-solitude-4;
+      outline: none;
+    }
+
+    @include vp-1023 {
+      padding: 12px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  &--fourth {
+    color: $color-black-russian;
+    background-color: $color-solitude-1;
+  }
+
+  &--fifth {
+    color: $color-black-russian;
+    background-color: transparent;
+
+    &:hover, &:focus-visible {
+      background-color: $color-solitude-4;
+      outline: none;
+    }
+  }
+
+  &--sixth {
+    padding: 12px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &[disabled], &--disabled {
+    background-color: $color-white-smoke-2;
+    color: $color-manatee-2;
+    pointer-events: none;
+  }
+}

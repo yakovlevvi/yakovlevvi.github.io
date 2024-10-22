@@ -1,0 +1,87 @@
+.order-card {
+  $root: &;
+
+  background-color: $color-white;
+  border: 3px solid rgba($color-black, 0.1);
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 664px;
+  color: $color-black;
+
+  &__image {
+    flex-shrink: 0;
+    height: 245px;
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 29px 29px;
+  }
+
+  &__title {
+    font-family: 'Press Start 2P', 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 12px;
+  }
+
+  &__accent {
+    color: $color-perano;
+
+    #{$root}--orange-hl & {      
+      color: $color-turbo;
+    }
+
+    #{$root}--green-hl & {      
+      color: $color-light-green;
+    }
+  }
+
+  &__desc {
+    line-height: 22px;
+    margin: 0 0 24px;
+  }
+
+  &__flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__feature {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__score {
+    background-color: $color-perano;
+    color: $color-black;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-right: 5px;
+    padding: 3px 8px;
+    
+    #{$root}--orange-hl & {      
+      background-color: $color-turbo;
+    }
+
+    #{$root}--green-hl & {      
+      background-color: $color-light-green;
+    }
+  }
+
+  &__link {
+    margin: auto 0 0 0;
+    width: 100%;
+  }
+}
+
+

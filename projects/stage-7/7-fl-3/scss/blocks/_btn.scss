@@ -1,0 +1,35 @@
+.btn {
+  width: 263px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  border-radius: 60px;
+  background-color: transparent;
+  color: $color-deep-lilac;
+  border: 1px solid $color-deep-lilac;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  cursor: pointer;
+
+  &:hover, &:focus-visible {
+    background-color: $color-white-lilac-2;
+    outline:none;
+  }
+
+  &--bg-lilac {
+    background-color: $color-deep-lilac;
+    border: none;
+    color: $color-white;
+
+    &:hover, &:focus-visible {
+      background-color: $color-deep-lilac-2;
+      outline:none;
+    }
+  }
+
+  &--size-small {
+    width: 154px;
+  }
+}

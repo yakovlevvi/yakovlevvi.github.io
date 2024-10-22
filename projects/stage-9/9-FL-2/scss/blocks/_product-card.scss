@@ -1,0 +1,252 @@
+.product-card {
+	background-color: $color-white-15;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	height: 100%;
+	min-height: 715px;
+	padding: 24px 40px 40px;
+	position: relative;
+	overflow: hidden;
+	$root: &;
+
+	&--green {
+		#{$root}__title-accent {
+			color: $color-light-green;
+		}
+
+		#{$root}__skills-value {
+			background-color: $color-light-green;
+		}
+	}
+
+	&__top {
+		align-items: flex-start;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		align-items: center;
+		background-color: transparent;
+		border: 1px solid $color-white;
+		border-radius: 14px;
+		color: $color-white;
+		cursor: pointer;
+		display: flex;
+		font-size: 14px;
+		gap: 8px;
+		line-height: 20px;
+		padding: 4px 16px;
+		transition: color $transition-300, border-color $transition-300;
+
+		&:hover,
+		&:focus-visible {
+			border-color: $color-light-green;
+			color: $color-light-green;
+		}
+	}
+
+	&__info-icon {
+		flex-shrink: 0;
+		pointer-events: none;
+	}
+
+	&__title {
+		color: $color-white;
+		font-family: 'Press Start 2P', 'Arial', sans-serif;
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 28px;
+		margin: 0 0 12px 0;
+	}
+
+	&__about {
+		font-size: 16px;
+		line-height: 22px;
+		margin: 0 0 24px 0;
+	}
+
+	&__skills {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		list-style: none;
+		margin: 0 0 40px 0;
+		padding: 0;
+	}
+
+	&__skills-item {
+		align-items: flex-start;
+		color: $color-white;
+		display: flex;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	&__skills-value {
+		border-radius: 12px;
+		color: $color-black;
+		font-weight: 700;
+		margin-right: 8px;
+		padding: 2px 8px;
+	}
+
+	&__price {
+		display: flex;
+		gap: 34px;
+		justify-content: flex-end;
+		margin-bottom: 40px;
+	}
+
+	&__old-price {
+		font-family: 'Press Start 2P', 'Arial', sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		position: relative;
+
+		&::after {
+			background-color: $color-salmon;
+			content: '';
+			height: 2px;
+			left: -2px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+	}
+
+	&__new-price {
+		color: $color-white;
+		font-family: 'Press Start 2P', 'Arial', sans-serif;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+
+	&__agree {
+		color: $color-white-70;
+		font-size: 14px;
+		line-height: 20px;
+		margin: 0 0 24px 0;
+	}
+
+	&__success-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		pointer-events: none;
+	}
+
+	&__angry-img {
+		margin: 0 0 16px;
+		transform: translate(-300px, -100px);
+	}
+
+	&__success-slogan {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 32px;
+		color: $color-black;
+		margin: 0 0 32px;
+		font-family: $ff-play;
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	&__thanks-text {
+		font-family: $ff-press;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 24px;
+		color: $color-black;
+		opacity: 0;
+	}
+
+	.form-order--submit & {
+		&__btn .btn__text,
+		&__btn .btn__icon {
+			animation: slideOutDown $transition-300 forwards;
+		}
+
+		&__btn {
+			animation: backgroundGrow $transition-300 0.4s forwards;
+		}
+
+		&__angry-img {
+			animation: spinningSmile 1s cubic-bezier(0.33, 0.69, 0.31, 1.45) 0.8s
+				forwards;
+		}
+
+		&__success-wrap {
+			pointer-events: all;
+		}
+
+		&__success-slogan {
+			animation: slideInDown $transition-300 2s forwards;
+		}
+
+		&__thanks-text {
+			animation: fadeIn $transition-300 2.8s forwards;
+		}
+	}
+}
+
+@keyframes slideOutDown {
+	0% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, 30px);
+		opacity: 0;
+	}
+}
+
+@keyframes spinningSmile {
+	0% {
+		transform: translate(-300px, -100px);
+	}
+	100% {
+		transform: translate(0, 0) rotate(360deg);
+	}
+}
+
+@keyframes slideInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes backgroundGrow {
+	0% {
+		transform: scale(1, 1);
+	}
+	100% {
+		transform: scale(2, 20);
+	}
+}

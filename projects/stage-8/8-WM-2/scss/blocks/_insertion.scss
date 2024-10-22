@@ -1,0 +1,23 @@
+.insertion {
+	background: url('../images/insertion-bg.jpg') no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 740px;
+
+	@media (min-resolution: 2dppx) {
+		background-image: url(../images/insertion-bg@2x.jpg);
+	}
+
+	@include vp-1023 {
+		height: 460px;
+		background-image: url('../images/insertion-bg-tablet.jpg');
+
+		@media (min-resolution: 2dppx) {
+			background-image: url('../images/insertion-bg-tablet@2x.jpg');
+		}
+	}
+
+	@include vp-767 {
+		height: 300px;
+	}
+}

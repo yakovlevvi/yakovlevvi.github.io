@@ -1,0 +1,42 @@
+.main-nav {
+	background-color: transparent;
+	border: 2px solid $color-black;
+	border-radius: 16px;
+	z-index: 1;
+	position: fixed;
+	top: 18px;
+	right: 27px;
+	padding: 52px 93px 46px 40px;
+	transition: clip-path $transition-500 0.3s, background-color 0s 1s;
+	clip-path: circle(12% at 86% 22%);
+
+	.header--open & {
+		background-color: $color-light-green;
+
+		clip-path: circle(150% at 86% 22%);
+		transition: clip-path $transition-500, background-color 0s;
+
+		&__list {
+			opacity: 1;
+			transition: opacity $transition-300 0.5s;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		opacity: 0;
+		transition: opacity $transition-300;
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 24px;
+		color: $color-black;
+	}
+}

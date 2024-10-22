@@ -1,0 +1,103 @@
+.custom-option {
+	$root: &;
+
+	position: relative;
+	overflow: hidden;
+
+	&__card {
+		pointer-events: none;
+		position: relative;
+		overflow: hidden;
+		transition: color $transition-300, border-color $transition-300;
+
+		&::before {
+			content: '';
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+			transition: clip-path $transition-300, background-color $transition-300;
+		}
+	}
+
+	// * Заготовка задержек под анимацию
+	&__feature {
+		transition: transform $transition-300;
+		&:nth-child(2) {
+			transition-delay: 0.1s;
+		}
+
+		&:nth-child(3) {
+			transition-delay: 0.2s;
+		}
+	}
+
+	&__field {
+		&:hover,
+		&:focus-visible {
+			~ .order-card {
+				border-color: $color-perano;
+
+				&--green-hl {
+					border-color: $color-light-green;
+				}
+
+				&--orange-hl {
+					border-color: $color-turbo;
+				}
+			}
+		}
+
+		&:checked {
+			~ #{$root}__card {
+				color: $color-white;
+				// ! Нужно чтобы фон поднимался снизу вверх
+				&::before {
+					background-color: $color-black;
+					clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+				}
+			}
+
+			~ #{$root}__card #{$root}__feature {
+				transform: translateX(5px);
+			}
+		}
+
+		&:not(:checked) {
+			~ #{$root}__card .btn {
+        background-color: $color-white;
+			}
+		}
+	}
+
+	&__label {
+		cursor: pointer;
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.order-card__image,
+	.order-card__wrapper {
+		z-index: 10;
+	}
+
+	.btn {
+		pointer-events: auto;
+		z-index: 10;
+	}
+}
+
+@keyframes slideInUp {
+	0% {
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+	}
+	100% {
+		clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+	}
+}

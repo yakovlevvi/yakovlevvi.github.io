@@ -1,0 +1,144 @@
+.interrior {
+
+	&__title {
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 56px;
+		letter-spacing: -0.04em;
+		margin: 0 0 40px;
+
+		@include vp-1023 {
+			font-size: 36px;
+			line-height: 40px;
+			margin: 0 0 30px;
+			text-align: center;
+		}
+
+		@include vp-767 {
+			font-size: 26px;
+			line-height: 32px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 900px 1fr;
+		gap: 60px;
+
+		@media (max-width: 1450px) {
+			grid-template-columns: 64% 1fr;
+		}
+
+		@include vp-1023 {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		@include vp-767 {
+			gap: 30px;
+		}
+	}
+
+	&__main-photo {
+		position: relative;
+	}
+
+	&__picture {
+		display: flex;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__add-btn {
+		&--chair {
+			left: 8.6%;
+			bottom: 34%;
+
+			@include vp-1023 {
+				left: 14%;
+				bottom: 33%;
+			}
+
+			@include vp-767 {
+				left: 11.5%;
+				bottom: 31%;
+			}
+
+			@media (max-width: 450px) {
+				left: 7.5%;
+				bottom: 31%;
+			}
+		}
+
+		&--vase {
+			bottom: 24.2%;
+			right: 44%;
+
+			@include vp-1023 {
+				bottom: 23.2%;
+			}
+
+			@include vp-767 {
+				bottom: 21.2%;
+				right: 45.5%;
+			}
+
+			@media (max-width: 450px) {
+				bottom: 21.2%;
+				right: 43.5%;
+			}
+		}
+
+		&--case {
+			bottom: 28.5%;
+			right: 25%;
+
+			@include vp-1023 {
+				bottom: 26.5%;
+				right: 28.2%;
+			}
+
+			@include vp-767 {
+				bottom: 25.5%;
+				right: 23.2%;
+			}
+		}
+
+		&--lamp {
+			top: 27.8%;
+			right: 17%;
+
+			@include vp-1023 {
+				right: 21%;
+				top: 27%;
+			}
+
+			@include vp-767 {
+				right: 21%;
+				top: 29%;
+			}
+
+			@media (max-width: 450px) {
+				right: 16%;
+				top: 26%;
+			}
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px 16px;
+
+		@include vp-767 {
+			gap: 20px 14px;
+		}
+	}
+}

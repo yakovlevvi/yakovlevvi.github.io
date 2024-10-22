@@ -1,0 +1,69 @@
+.yard {
+	padding: 80px 0 0;
+
+	@include vp-767 {
+		padding-top: 60px;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 420px);
+		gap: 160px;
+		align-items: center;
+
+		@include vp-1023 {
+			gap: 118px;
+			grid-template-columns: 270px 340px;
+		}
+
+		@include vp-767 {
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+		}
+
+		&--reversed {
+			@include vp-1023 {
+				grid-template-columns: 340px 270px;
+			}
+		}
+	}
+
+	&__heading {
+		font-family: $ff-ardeco;
+		font-weight: 400;
+		font-size: 64px;
+		line-height: 60px;
+		text-transform: uppercase;
+		margin: 0 0 24px;
+
+		@include vp-1023 {
+			font-size: 46px;
+			line-height: 46px;
+			margin-bottom: 20px;
+		}
+
+		@include vp-767 {
+			font-size: 36px;
+			line-height: 34px;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		margin: 0;
+
+		@include vp-1023 {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		@include vp-767 {
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+}

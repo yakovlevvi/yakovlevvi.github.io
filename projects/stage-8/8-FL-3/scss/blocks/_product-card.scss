@@ -1,0 +1,58 @@
+.product-card {
+	&:hover, &:focus-visible {
+		outline:none;
+
+		.product-card__link {
+			background-color: $color-green-white;
+		}
+	}
+
+	&__img {
+		background-color: $color-sauvignon;
+		width: 100%;
+		margin: 0 0 15px;
+	}
+
+	&__name {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 22px;
+		text-transform: uppercase;
+		color: $color-black;
+		display: block;
+		margin: 0 0 5px;
+
+		@include vp-767 {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	&__price {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 18px;
+		display: block;
+		margin: 0 0 15px;
+
+		@include vp-767 {
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+
+	&__link {
+		font-size: 12px;
+		line-height: 16px;
+		padding: 13px;
+		display: block;
+		width: 100%;
+		min-width: unset;
+
+		@include vp-767 {
+			font-size: 10px;
+			line-height: 12px;
+			padding: 11px;
+		}
+	}
+}

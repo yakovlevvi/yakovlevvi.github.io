@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Ui-kit - БЕСIT</title>
+</head>
+
+<body>
+  <main>
+    <div class="uikit">
+      <div class="container">
+        <h1 class="visually-hidden">Ui-kit проекта БЕСIT</h1>
+        <div class="uikit__logo">
+          <svg width="420" height="84" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-logo"></use>
+          </svg>
+        </div>
+        <h2 class="uikit__subtitle">Ui-Kit</h2>
+        <div class="uikit__block">
+          <h2 class="uikit__block-title">Inputs</h2>
+          <h3 class="uikit__block-subtitle">Base</h3>
+          <div class="uikit__components">
+            <div class="custom-input">
+              <input class="custom-input__field" aria-label="Имя" type="text" name="name" placeholder="Имя" required>
+              <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-mail"></use>
+              </svg>
+            </div>
+            <div class="custom-input custom-input--error">
+              <input class="custom-input__field" aria-label="Имя" type="text" name="name" placeholder="Имя" required>
+              <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-mail"></use>
+              </svg>
+            </div>
+            <div class="custom-textarea">
+              <textarea class="custom-textarea__field" aria-label="Комментарий" name="text"
+                placeholder="Комментарий"></textarea>
+              <svg class="custom-textarea__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-comment"></use>
+              </svg>
+            </div>
+          </div>
+          <h3 class="uikit__block-subtitle">Alternative</h3>
+          <div class="uikit__components">
+            <div class="custom-alternative-input">
+              <input class="custom-alternative-input__field" id="user-tel" type="text" name="tel" placeholder=""
+                required>
+              <label class="custom-alternative-input__label" for="user-tel">
+                <span class="custom-alternative-input__label-text">Номер телефона</span>
+              </label>
+              <svg class="custom-alternative-input__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-phone"></use>
+              </svg>
+              <span class="custom-alternative-input__error">Заполните поле</span>
+            </div>
+            <div class="custom-alternative-input custom-alternative-input--error">
+              <input class="custom-alternative-input__field" id="user-tel-error" type="text" value="+7333" name="tel"
+                placeholder="" required>
+              <label class="custom-alternative-input__label" for="user-tel-error">
+                <span class="custom-alternative-input__label-text">Номер телефона</span>
+              </label>
+              <svg class="custom-alternative-input__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-phone"></use>
+              </svg>
+              <span class="custom-alternative-input__error">Заполните поле</span>
+            </div>
+            <div class="custom-alternative-textarea">
+              <textarea class="custom-alternative-textarea__field" id="address" name="address" placeholder=""
+                required></textarea>
+              <label class="custom-alternative-textarea__label" for="address">
+                <span class="custom-alternative-textarea__label-text">Адрес доставки</span>
+              </label>
+              <span class="custom-alternative-textarea__error">Заполните поле</span>
+            </div>
+            <div class="custom-alternative-textarea custom-alternative-textarea--error">
+              <textarea class="custom-alternative-textarea__field" id="address-error" name="address" placeholder=""
+                required>г Москва, ул Строителей, д 12, кв 25</textarea>
+              <label class="custom-alternative-textarea__label" for="address-error">
+                <span class="custom-alternative-textarea__label-text">Адрес доставки</span>
+              </label>
+              <span class="custom-alternative-textarea__error">Заполните поле</span>
+            </div>
+            <div class="custom-alternative-textarea">
+              <textarea class="custom-alternative-textarea__field" id="address-disabled" name="address" placeholder=""
+                required disabled></textarea>
+              <label class="custom-alternative-textarea__label" for="address-disabled">
+                <span class="custom-alternative-textarea__label-text">Адрес доставки</span>
+              </label>
+              <span class="custom-alternative-textarea__error">Заполните поле</span>
+            </div>
+          </div>
+        </div>
+        <div class="uikit__block">
+          <h2 class="uikit__block-title">Checkboxes and radios</h2>
+          <h3 class="uikit__block-subtitle">Base</h3>
+          <div class="uikit__components">
+            <div class="custom-checkbox">
+              <input class="custom-checkbox__field visually-hidden" id="quiz-1-1" type="checkbox" name="quiz-1-1">
+              <label class="custom-checkbox__label" for="quiz-1-1">
+                <svg class="custom-checkbox__icon" width="17" height="15" aria-hidden="true">
+                  <use xlink:href="images/sprite.svg#icon-check"></use>
+                </svg>
+                <span class="custom-checkbox__text">Вариант ответа</span>
+              </label>
+            </div>
+            <div class="custom-radio">
+              <input class="custom-radio__field visually-hidden" id="quiz-2-1" type="radio" name="quiz-2" value="1"
+                checked>
+              <label class="custom-radio__label" for="quiz-2-1">Вариант ответа</label>
+            </div>
+            <div class="custom-radio">
+              <input class="custom-radio__field visually-hidden" id="quiz-2-2" type="radio" name="quiz-2" value="2">
+              <label class="custom-radio__label" for="quiz-2-2">Вариант ответа</label>
+            </div>
+          </div>
+          <h3 class="uikit__block-subtitle">Alternative</h3>
+          <div class="uikit__components">
+            <div class="custom-alternative-checkbox">
+              <input class="custom-alternative-checkbox__field visually-hidden" id="get-news" type="checkbox"
+                name="get-news">
+              <label class="custom-alternative-checkbox__label" for="get-news">
+                <svg class="custom-alternative-checkbox__icon" width="13" height="9" aria-hidden="true">
+                  <use xlink:href="images/sprite.svg#icon-check-2"></use>
+                </svg>
+                <span class="custom-alternative-checkbox__text">Получать новости сервиса</span>
+                <span class="custom-alternative-checkbox__about">Сообщения будут приходить не чаще чем один раз
+                  в неделю</span>
+              </label>
+            </div>
+            <div class="custom-alternative-radio">
+              <input class="custom-alternative-radio__field visually-hidden" id="pay-card" type="radio" name="pay"
+                value="card" checked>
+              <label class="custom-alternative-radio__label" for="pay-card">Картой онлайн</label>
+            </div>
+            <div class="custom-alternative-radio">
+              <input class="custom-alternative-radio__field visually-hidden" id="pay-cash" type="radio" name="pay"
+                value="cash">
+              <label class="custom-alternative-radio__label" for="pay-cash">Наличными</label>
+            </div>
+            <div class="custom-alternative-radio">
+              <input class="custom-alternative-radio__field visually-hidden" id="pay-phone" type="radio" name="pay"
+                value="phone">
+              <label class="custom-alternative-radio__label" for="pay-phone">По телефону</label>
+            </div>
+          </div>
+        </div>
+        <div class="uikit__block uikit__block--white">
+          <h2 class="uikit__block-title">Buttons</h2>
+          <div class="uikit__components">
+            <button class="btn" type="button"><span class="btn__text">Посмотреть детали</span></button>
+            <button class="btn btn--violet" type="button"><span class="btn__text">Посмотреть детали</span></button>
+            <button class="btn btn--green" type="button"><span class="btn__text">Посмотреть детали</span></button>
+            <button class="btn btn--orange" type="button"><span class="btn__text">Посмотреть детали</span></button>
+            <button class="btn btn--xl btn--alternate-font btn--green" type="button"><span class="btn__text">Оформить</span></button>
+            <button class="btn btn--m btn--green" type="button">
+              <span class="btn__text">Отправить заказ</span>
+              <svg class="btn__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+            <button class="btn btn--m btn--green" type="button" disabled>
+              <span class="btn__text">Отправить заказ</span>
+              <svg class="btn__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="uikit__components uikit__components--single-black">
+            <button class="btn-tooltip" type="button">Состав пакета
+              <svg class="btn-tooltip__icon" width="16" height="16" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-i"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="uikit__block uikit__block--white">
+          <h2 class="uikit__block-title">Product cards</h2>
+          <div class="uikit__components">
+            <ul class="order-form">
+              <li class="order-form__item">
+                <div class="custom-option">
+                  <input class="custom-option__field visually-hidden" type="radio" name="option" id="junior">
+                  <label class="custom-option__label" for="junior"></label>
+                  <div class="order-card custom-option__card">
+                    <img class="order-card__image" src="images/image-junior.png" alt="Иллюстрация опции Junior">
+                    <div class="order-card__wrapper">
+                      <h3 class="order-card__title">Не<span
+                          class="order-card__accent">БЕС</span>ит Junior</h3>
+                      <p class="order-card__desc">Идеальный вариант чтобы успокоиться, стать увереннее
+                        и&nbsp;организовать все что не&nbsp;организовано</p>
+                      <div class="order-card__flex-wrapper">
+                        <span class="order-card__feature custom-option__feature"><span
+                            class="order-card__score">+99%</span> к спокойствию</span>
+                        <span class="order-card__feature custom-option__feature"><span class="order-card__score">+3</span>
+                          степени уверенности</span>
+                        <span class="order-card__feature custom-option__feature"><span class="order-card__score">+7</span>
+                          уровней организованности</span>
+                      </div>
+                      <button class="order-card__link btn btn--violet" type="button"><span class="btn__text">Посмотреть
+                          детали</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="order-form__item">
+                <div class="custom-option">
+                  <input class="custom-option__field visually-hidden" type="radio" name="option" id="middle">
+                  <label class="custom-option__label" for="middle"></label>
+                  <div class="order-card order-card--green-hl custom-option__card">
+                    <img class="order-card__image" src="images/image-middle.png" alt="Иллюстрация опции Middle">
+                    <div class="order-card__wrapper">
+                      <h3 class="order-card__title">Не<span
+                          class="order-card__accent">БЕС</span>ит Middle</h3>
+                      <p class="order-card__desc">Инициатива не&nbsp;заставит себя ждать, социальная привлекательность
+                        возрастет до&nbsp;небес, а&nbsp;задачи наполнятся творчеством</p>
+                      <div class="order-card__flex-wrapper">
+                        <span class="order-card__feature custom-option__feature"><span
+                            class="order-card__score">+150%</span> к инициативности</span>
+                        <span class="order-card__feature custom-option__feature"><span
+                            class="order-card__score">+10</span> уровней социальной
+                          привлекательности</span>
+                        <span class="order-card__feature custom-option__feature"><span class="order-card__score">+1</span>
+                          посещение творческой музы</span>
+                      </div>
+                      <button class="order-card__link btn btn--green" type="button"><span class="btn__text">Посмотреть
+                          детали</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="order-form__item">
+                <div class="custom-option">
+                  <input class="custom-option__field visually-hidden" type="radio" name="option" id="senior">
+                  <label class="custom-option__label" for="senior"></label>
+                  <div class="order-card order-card--orange-hl custom-option__card">
+                    <img class="order-card__image" src="images/image-senior.png" alt="Иллюстрация опции Senior">
+                    <div class="order-card__wrapper">
+                      <h3 class="order-card__title">Не<span
+                          class="order-card__accent">БЕС</span>ит Senior</h3>
+                      <p class="order-card__desc">Для тех кто хочет вырваться на&nbsp;новый уровень. Повышаем
+                        авторитетность, качаем дипломатию и&nbsp;заряжаем на&nbsp;успех.</p>
+                      <div class="order-card__flex-wrapper">
+                        <span class="order-card__feature custom-option__feature"><span
+                            class="order-card__score">+33%</span> к авторитетности</span>
+                        <span class="order-card__feature custom-option__feature"><span class="order-card__score">+5</span>
+                          уровней дипломатии</span>
+                        <span class="order-card__feature custom-option__feature"><span
+                            class="order-card__score">+100</span> зарядов успеха</span>
+                      </div>
+                      <button class="order-card__link btn btn--orange" type="button"><span class="btn__text">Посмотреть
+                          детали</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

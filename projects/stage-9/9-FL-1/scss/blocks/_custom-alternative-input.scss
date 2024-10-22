@@ -1,0 +1,120 @@
+.custom-alternative-input {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  $root: &;
+  transition: margin $transition-300;
+
+  &--error {
+    margin: 0 0 20px 0;
+
+    #{$root}__error {
+      opacity: 1;
+    }
+
+    #{$root}__field {
+      background-color: rgba($color-salmon, 0.15);
+
+      &:not(:placeholder-shown) {
+        + #{$root}__label {
+          color: $color-salmon;
+        }
+      }
+    }
+
+    #{$root}__icon {
+      color: $color-salmon;
+    }
+
+    #{$root}__label {
+      color: $color-salmon;
+    }
+  }
+
+  &__field {
+    background-color: rgba($color-white, 0.15);
+    border: none;
+    border-radius: 8px;
+    color: $color-white;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    height: 70px;
+    line-height: 24px;
+    outline: none;
+    padding: 34px 36px 12px 20px;
+    width: 100%;
+    transition: background-color $transition-300;
+
+    &[disabled] {
+      background-color: rgba($color-white, 0.05);
+      pointer-events: none;
+
+      + #{$root}__label {
+        color: rgba($color-white, 0.15);
+        pointer-events: none;
+      }
+    }
+
+    &:not(:placeholder-shown) {
+      + #{$root}__label {
+        color: rgba($color-white, 0.8);
+        font-size: 12px;
+        line-height: 16px;
+        top: 10px;
+      }
+    }
+
+    &:hover,
+    &:focus-visible {
+      &:not(#{$root}--error #{$root}__field) {
+        background-color: rgba($color-bay-leaf, 0.15);
+
+        ~ #{$root}__icon {
+          color: $color-light-green;
+        }
+      }
+    }
+
+    &::placeholder {
+      color: rgba($color-white, 0.4);
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    color: rgba($color-white, 0.4);
+    display: flex;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    left: 20px;
+    line-height: 24px;
+    position: absolute;
+    top: 34px;
+    transition: color $transition-300, top $transition-300, font-size $transition-300, line-height $transition-300;
+  }
+
+  &__icon {
+    bottom: 12px;
+    color: rgba($color-white, 0.4);
+    pointer-events: none;
+    position: absolute;
+    right: 22px;
+    transition: color $transition-300;
+
+  }
+
+  &__error {
+    bottom: -24px;
+    color: $color-salmon;
+    opacity: 0;
+    font-size: 12px;
+    left: 0;
+    line-height: 16px;
+    position: absolute;
+    transition: opacity $transition-300;
+  }
+}

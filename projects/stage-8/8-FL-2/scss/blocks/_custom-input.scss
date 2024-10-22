@@ -1,0 +1,49 @@
+.custom-input {
+	&--error {
+		.custom-input__field {
+			border-color: $color-red;
+		}
+
+		.custom-input__error {
+			display: flex;
+		}
+	}
+
+	&__field {
+		width: 100%;
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid $color-dark-grayish-yellow;
+		padding: 0 0 9px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 22px;
+		color: $color-bokara-grey;
+
+		&:hover,
+		&:focus-visible {
+			&::placeholder {
+				color: $color-cloudy;
+			}
+			border-color: $color-moon-mist;
+			outline: none;
+		}
+
+		&::placeholder {
+			color: $color-bokara-grey;
+		}
+
+		@include vp-767 {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	&__error {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: $color-red;
+		display: none;
+	}
+}

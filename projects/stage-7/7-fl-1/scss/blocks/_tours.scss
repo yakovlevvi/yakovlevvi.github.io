@@ -1,0 +1,49 @@
+.tours {
+  margin: 0 0 55px;
+
+  @include vp-1023 {
+    margin-bottom: 59px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    @include vp-767 {
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  &__item--flat {
+    grid-column: span 2;
+  }
+
+  &__item--flat-small {
+    @include vp-1023 {
+      grid-column: 1;
+    }
+  }
+
+}

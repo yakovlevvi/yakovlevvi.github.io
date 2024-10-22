@@ -1,0 +1,57 @@
+.custom-textarea {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	grid-column: span 3;
+
+	@include vp-1023 {
+		grid-column: unset;
+	}
+
+	&__field {
+		border: 1px solid $color-hawkes-blue;
+		border-radius: 8px;
+		background-color: transparent;
+		padding: 16px;
+		margin: 0;
+		width: 100%;
+		min-height: 160px;
+		font-size: 15px;
+		line-height: 20px;
+		color: $color-nero; 
+		z-index: 10;
+
+		&:hover, &:focus-visible {
+			border-color: $color-deep-lilac;
+			outline:none;
+		}
+
+		@include vp-1023 {
+			min-height: 140px;
+		}
+
+		@include vp-767 {
+			min-height: 120px;
+			padding: 15px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		&::placeholder {
+			color: $color-grey-suit;
+		}
+	}
+
+	&__label {
+		font-size: 14px;
+		line-height: 18px;
+		color: $color-grey-suit;
+		user-select: none;
+		cursor: pointer;
+
+		@include vp-767 {
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+}

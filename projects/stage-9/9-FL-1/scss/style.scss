@@ -1,0 +1,27 @@
+/* Global */
+/* ------------------------------------ */
+@import "global/_normalize.scss";
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_fonts";
+@import "global/_reboot";
+@import "global/_container";
+@import "global/_visually-hidden";
+
+
+/* Blocks */
+/* ------------------------------------ */
+@import "blocks/_uikit";
+@import "blocks/_custom-input";
+@import "blocks/_custom-textarea";
+@import "blocks/_custom-alternative-input";
+@import "blocks/_custom-alternative-textarea";
+@import "blocks/_custom-checkbox";
+@import "blocks/_custom-radio";
+@import "blocks/_custom-alternative-checkbox";
+@import "blocks/_custom-alternative-radio";
+@import "blocks/_btn";
+@import "blocks/_btn-tooltip";
+@import "blocks/_order-form";
+@import "blocks/_order-card";
+@import "blocks/_custom-option";
